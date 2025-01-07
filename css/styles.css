@@ -76,6 +76,7 @@ address {
 
 button {
     cursor: pointer;
+    padding: 0
 }
 
 section {
@@ -120,14 +121,31 @@ fieldset {
 
 /* #region HEADER */
 
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .header-container {
     display: flex;
+
+    justify-content: space-between;
+        /* Розподіляє простір між елементами */
+        align-items: center;
+        /* Вирівнює по вертикалі */
+        width: 100%;
+        /* Контейнер займає всю ширину батьківського елемента */
 }
 
 .header-nav {
     display: flex;
     justify-content: space-between;
     flex-grow: 1;
+
+    flex: 1;
+        /* Навігація розтягується, займаючи доступний простір */
+        
 }
 
 .logo {
@@ -140,6 +158,8 @@ fieldset {
     letter-spacing: -0.03em;
     color: #111;
     padding: 20px 0 19px 0;
+
+    flex-shrink: 0;
 }
 
 @media screen and (min-width: 736px) {
