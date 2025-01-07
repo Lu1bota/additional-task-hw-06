@@ -1,1 +1,2 @@
-# additional-task-hw-02
+mobile - 367px
+tablet - 736px
