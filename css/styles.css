@@ -131,11 +131,7 @@ fieldset {
     display: flex;
 
     justify-content: space-between;
-        /* Розподіляє простір між елементами */
-        align-items: center;
-        /* Вирівнює по вертикалі */
-        width: 100%;
-        /* Контейнер займає всю ширину батьківського елемента */
+    align-items: center;
 }
 
 .header-nav {
@@ -144,8 +140,6 @@ fieldset {
     flex-grow: 1;
 
     flex: 1;
-        /* Навігація розтягується, займаючи доступний простір */
-        
 }
 
 .logo {
