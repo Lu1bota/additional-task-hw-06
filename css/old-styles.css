@@ -206,6 +206,7 @@ fieldset {
     border-radius: 8px;
     margin-bottom: 32px;
     margin-left: 72px;
+    text-align: right;
 }
 
 .start-page-button-container {
