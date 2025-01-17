@@ -1,5 +1,11 @@
 /* #region GLOBAL SETINGS */
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
     font-family: "Montserrat", sans-serif;
     background-color: #fafafa;
@@ -54,7 +60,7 @@ p {
 
 @media screen and (min-width: 1168px) {
     .container {
-        min-width: 1168px;
+        min-width: 1136px;
     }
 }
 
@@ -79,20 +85,20 @@ button {
     padding: 0
 }
 
-section {
+.section {
     padding-top: 60px;
     padding-bottom: 60px;
 }
 
 @media screen and (min-width: 736px) {
-    section {
+    .section {
         padding-top: 80px;
         padding-bottom: 80px;
         }
 }
 
 @media screen and (min-width: 1168px) {
-    section {
+    .section {
         padding-top: 100px;
         padding-bottom: 100px;
     }
@@ -349,7 +355,9 @@ fieldset {
 
 /* #endregion */
 
-/* #region Mobile */
+/* #region ========== MOBILE ========== */
+
+/* #region Mobile Start Page */
 
     .start-page {
             max-width: 735px;
@@ -451,6 +459,7 @@ fieldset {
     line-height: 1.17;
     letter-spacing: -0.03em;
     color: #fff;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .start-page-link-scroll:hover,
@@ -498,11 +507,281 @@ fieldset {
 
 /* #endregion */
 
-/* #region Tablet */
+/* #region Mobile Benefits */
+
+.benefits {
+    background-color: #1e1823;
+    margin-top: 60px;
+    padding: 0;
+}
+
+.container-benefits {
+    padding: 20px;
+
+    max-width: 375px;
+    height: 792px;
+    display: flex;
+}
+
+.benefits-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.benefits-list-item {
+    flex-basis: calc((100% - 20px) / 1);
+    max-width: 336px;
+    min-height: 244px;
+}
+
+.container-benefits-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    width: 62px;
+    height: 62px;
+    margin-bottom: 22px;
+}
+
+.benefits-icon {
+    fill: #fd9222;
+}
+
+.benefits-list-item-title {
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.01em;
+    color: #fff;
+    margin-bottom: 18px;
+}
+
+.benefits-list-item-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.02em;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 308px;
+}
+
+/* #endregion Mobile Benefits*/
+
+/* #region Mobile Ingredients */
+
+.container-ingregients {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 335px;
+    min-height: 1376px;
+}
+
+.container-ingregients-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+
+    max-width: 335px;
+    min-height: 204px;
+}
+
+.ingredients-title {
+    align-items: center;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #111;
+    max-width: 283px;
+}
+
+.ingredients-title-taste {
+    color: #fd9222;
+}
+
+.ingredients-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: #111;
+    max-width: 335px;
+    margin-bottom: 32px;
+}
+
+.ingredients-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ingredients-list-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.ingredients-list-item:nth-child(1) {
+    border: 1px solid #FD9222;
+    background-color: #FD9222;
+    border-radius: 15px;
+    fill: none;
+    width: 335px;
+    height: 270px;
+}
+
+.ingredients-list-item:nth-child(2) {
+    border: 1px solid #FD9222;
+    background-color: #fff;
+    border-radius: 15px;
+    width: 335px;
+    height: 270px;
+}
+
+.ingredients-list-item:nth-child(3) {
+    border: 1px solid #1e1823;
+    background-color: #1e1823;
+    border-radius: 15px;
+    width: 335px;
+    height: 270px;
+}
+
+.ingredients-list-item:nth-child(4) {
+    border: 1px solid #FD9222;
+    background-color: #fff;
+    border-radius: 15px;
+    width: 335px;
+    height: 270px;
+}
+
+.container-ingredients-list-item img {
+    margin: auto;
+    margin-top: 28px;
+}
+
+.ingredients-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    padding: 28px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    transform: translateY(100%);
+
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ingredients-list-item:hover .ingredients-overlay {
+    transform: translateY(0);
+}
+
+.ingredients-overlay-title {
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    color: #111;
+    margin-bottom: 8px;
+}
+
+.container-ingredients-btn {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 14px;
+    max-width: 180px;
+    min-height: 24px;
+}
+
+.ingredients-overlay-btn-orange {
+    border-radius: 35px;
+    padding: 6px 16px;
+    max-width: 81px;
+    height: 24px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 1.2;
+    background-color: #fd9222;
+    white-space: nowrap;
+    border: none;
+    color: #fff;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ingredients-overlay-btn-orange:hover,
+.ingredients-overlay-btn-orange:focus {
+    background-color: #fff;
+    color: #fd9222;
+    border: 1px solid #fd9222;
+}
+
+.ingredients-overlay-btn-white {
+    border: 1px solid #fd9222;
+    border-radius: 35px;
+    width: 93px;
+    height: 24px;
+    background-color: #fafafa;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 1.2;
+    color: #111;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ingredients-overlay-btn-white:hover {
+    background-color: #fd9222;
+    color: #fafafa;
+}
+
+.ingredients-overlay-text {
+    max-width: 279px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.02em;
+    color: #111;
+}
+
+.ingredients-list-item-title {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #111;
+    margin-top: 28px;
+    margin-left: 25px;
+}
+
+.ingredients-title-white {
+    color: #fff;
+}
+
+/* #endregion Mobile Ingredients */
+
+/* #endregion ========== MOBILE ==========*/
+
+/* #region ========== TABLET ========== */
+
+/* #region Tablet Start Page */
 
 @media screen and (min-width: 736px) {
     .start-page {
-        max-width: 1167px;
+        max-width: 768px;
         min-height: 890px;
         background-image: linear-gradient(180deg, rgba(17, 17, 17, 0.4) 0%, rgba(17, 17, 17, 0.4) 100%), url(../images/hero-bg-tablet.jpg);
     }
@@ -564,7 +843,99 @@ fieldset {
 
 /* #endregion */
 
-/* #region Desktop */
+/* #region Tablet Benefits */
+
+@media screen and (min-width: 736px) {
+    .benefits {
+        margin-top: 40px;
+    }
+    
+    .container-benefits {
+        padding: 50px 32px;
+        max-width: 768px;
+        height: 620px;
+    }
+
+    .benefits-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 32px;
+    }
+
+    .benefits-list-item {
+        flex-basis: calc((100% - 64px) / 2);
+    }
+}
+
+/* #endregion Tablet Benefits*/
+
+/* #region Tablet Ingredients */
+
+@media screen and (min-width: 736px) {
+    .container-ingregients {
+        align-items: start;
+        max-width: 704px;
+        min-height: 778px;
+    }
+    
+    .container-ingregients-title {
+        gap: 28px;
+        max-width: 486px;
+        min-height: 156px;
+        margin: 0 auto;
+    }
+
+    .ingredients-title {
+        font-size: 24px;
+        line-height: 1.17;
+        max-width: 411px;
+    }
+
+    .ingredients-text {
+        max-width: 486px;
+        margin-bottom: 50px;
+    }
+
+    .ingredients-list {
+        justify-content: center;
+        align-items: start;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 32px;
+    }
+
+    .ingredients-list-item {
+        flex-basis: calc((100% - 32px) / 2);
+    }
+
+    .ingredients-list-item:nth-child(1) {
+        width: 336px;
+    }
+
+    .ingredients-list-item:nth-child(2) {
+        width: 336px;
+    }
+
+    .ingredients-list-item:nth-child(3) {
+        width: 336px;
+    }
+    
+    .ingredients-list-item:nth-child(4) {
+        width: 336px;
+    }
+
+    .ingredients-overlay-text {
+        max-width: 280px;
+    }
+}
+
+/* #endregion Tablet Ingredients */
+
+/* #endregion ========== TABLET ==========*/
+
+/* #region ========== DESKTOP ========== */
+
+/* #region Desktop Start Page */
 
 @media screen and (min-width: 1168px) {
     .start-page {
@@ -592,4 +963,89 @@ fieldset {
     }
 }
 
-/* #endregion */
+/* #endregion Desktop Start Page*/
+
+/* #region Desktop Benefits */
+
+@media screen and (min-width: 1168px) {
+    .benefits {
+        margin-top: 72px;
+    }
+    
+    .container-benefits {
+        padding: 50px;
+        max-width: 1200px;
+        height: 344px;
+    }
+
+    .benefits-list {
+        justify-content: space-between;
+        gap: 70px;
+        flex-wrap: nowrap;
+    }
+
+    .benefits-list-item {
+        flex-basis: calc((100% - 140px) / 3);
+        max-width: 308px;
+        position: relative;
+    }
+    
+    .benefits-list-item::after {
+        position: absolute;
+        content: '';
+        top: 60px;
+        left: -70px;
+        transform: translateX(-50%);
+    
+        border-right: 1px solid rgba(255, 255, 255, 0.5);
+        height: 124px;
+        width: 0px;
+        margin-left: 18px;
+    
+    }
+    
+    .benefits-list-item:nth-child(1)::after {
+        display: none;
+    }
+}
+
+/* #endregion Desktop Benefits */
+
+/* #region Desktop Ingredients */
+
+@media screen and (min-width: 1168px) {
+    .container-ingregients {
+        max-width: 1136px;
+        min-height: 476px;
+    }
+
+    .ingredients-list {
+        gap: 19px;
+        flex-wrap: nowrap;
+    }
+
+    .ingredients-list-item:nth-child(1) {
+        width: 270px;
+    }
+
+    .ingredients-list-item:nth-child(2) {
+        width: 270px;
+    }
+
+    .ingredients-overlay {
+        padding: 20px;
+    }
+
+    .ingredients-overlay-text {
+        max-width: 230px;
+    }
+
+    .ingredients-list-item-title {
+        margin-top: 36px;
+        margin-left: 32px;
+    }
+}
+
+/* #endregion Desktop Ingredients */
+
+/* #endregion ========== DESKTOP ==========*/
