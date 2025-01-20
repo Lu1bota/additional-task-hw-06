@@ -708,9 +708,12 @@ fieldset {
 }
 
 .ingredients-overlay-btn-orange {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 35px;
     padding: 6px 16px;
-    max-width: 81px;
+    min-width: 81px;
     height: 24px;
     font-weight: 400;
     font-size: 10px;
@@ -772,6 +775,12 @@ fieldset {
 }
 
 /* #endregion Mobile Ingredients */
+
+/* #region Mobile Made */
+
+
+
+/* #region Mobile Made */
 
 /* #endregion ========== MOBILE ==========*/
 
@@ -931,6 +940,12 @@ fieldset {
 
 /* #endregion Tablet Ingredients */
 
+/* #region Tablet Made */
+
+
+
+/* #endregion Tablet Made */
+
 /* #endregion ========== TABLET ==========*/
 
 /* #region ========== DESKTOP ========== */
@@ -1032,6 +1047,14 @@ fieldset {
         width: 270px;
     }
 
+    .ingredients-list-item:nth-child(3) {
+        width: 270px;
+    }
+    
+    .ingredients-list-item:nth-child(4) {
+        width: 270px;
+    }
+
     .ingredients-overlay {
         padding: 20px;
     }
@@ -1045,6 +1068,12 @@ fieldset {
         margin-left: 32px;
     }
 }
+
+/* #endregion Desktop Ingredients */
+
+/* #region Desktop Ingredients */
+
+
 
 /* #endregion Desktop Ingredients */
 

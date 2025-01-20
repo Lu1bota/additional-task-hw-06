@@ -173,11 +173,34 @@
               <li class="ingredients-list-item ingredients-list-item-orange">
                 <div class="container-ingredients-list-item">
                   <div class="container-ingredients-img">
-                    <img
-                      src="./images/milk-chocolate.png"
-                      alt="milk chocolate"
-                      width="206"
-                    />
+                    <picture>
+                      <source
+                        media="(min-width: 1168px)"
+                        srcset="
+                          ./images/milk-chocolate.png            1x,
+                          ./images/milk-chocolate-desktop-2x.png 2x
+                        "
+                      />
+                      <source
+                        media="(min-width: 736px)"
+                        srcset="
+                          ./images/milk-chocolate-tablet.png    1x,
+                          ./images/milk-chocolate-tablet-2x.png 2x
+                        "
+                      />
+                      <source
+                        media="(max-width: 735px)"
+                        srcset="
+                          ./images/milk-chocolate-mobile.png    1x,
+                          ./images/milk-chocolate-mobile-2x.png 2x
+                        "
+                      />
+                      <img
+                        src="./images/milk-chocolate-mobile.png"
+                        alt="milk chocolate"
+                        width="206"
+                      />
+                    </picture>
                   </div>
                   <h3
                     class="ingredients-list-item-title ingredients-title-white"
@@ -214,7 +237,34 @@
               <li class="ingredients-list-item">
                 <div class="container-ingredients-list-item">
                   <div class="container-ingredients-img">
-                    <img src="./images/milk.png" alt="milk" width="206" />
+                    <picture>
+                      <source
+                        media="(min-width: 1168px)"
+                        srcset="
+                          ./images/milk.png            1x,
+                          ./images/milk-desktop-2x.png 2x
+                        "
+                      />
+                      <source
+                        media="(min-width: 736px)"
+                        srcset="
+                          ./images/milk-tablet.png    1x,
+                          ./images/milk-tablet-2x.png 2x
+                        "
+                      />
+                      <source
+                        media="(max-width: 735px)"
+                        srcset="
+                          ./images/milk-mobile.png    1x,
+                          ./images/milk-mobile-2x.png 2x
+                        "
+                      />
+                      <img
+                        src="./images/milk-mobile.png"
+                        alt="milk"
+                        width="206"
+                      />
+                    </picture>
                   </div>
                   <h3 class="ingredients-list-item-title">MILK</h3>
                   <div class="ingredients-overlay">
@@ -247,11 +297,34 @@
               <li class="ingredients-list-item">
                 <div class="container-ingredients-list-item">
                   <div class="container-ingredients-img">
-                    <img
-                      src="./images/hazelnuts.png"
-                      alt="hazelnuts"
-                      width="206"
-                    />
+                    <picture>
+                      <source
+                        media="(min-width: 1168px)"
+                        srcset="
+                          ./images/hazelnuts.png            1x,
+                          ./images/hazelnuts-desktop-2x.png 2x
+                        "
+                      />
+                      <source
+                        media="(min-width: 736px)"
+                        srcset="
+                          ./images/hazelnuts-tablet.png 1x,
+                          ./images/hazelnuts-tablet.png 2x
+                        "
+                      />
+                      <source
+                        media="(max-width: 735px)"
+                        srcset="
+                          ./images/hazelnuts-mobile.png    1x,
+                          ./images/hazelnuts-mobile-2x.png 2x
+                        "
+                      />
+                      <img
+                        src="./images/hazelnuts-mobile.png"
+                        alt="hazelnuts"
+                        width="206"
+                      />
+                    </picture>
                   </div>
                   <h3
                     class="ingredients-list-item-title ingredients-title-white"
@@ -332,7 +405,7 @@
       </section>
 
       <!-- ===== How it’s made? ===== -->
-      <!-- <section class="section made">
+      <section class="section made">
         <div class="container">
           <h2 id="how-its-made" class="made-title">
             How it’s <span class="made-title-orange">made?</span>
@@ -395,7 +468,7 @@
             </div>
           </div>
         </div>
-      </section> -->
+      </section>
 
       <!-- ===== PRODUCTS ===== -->
       <!-- <section class="section products visually-hidden">
