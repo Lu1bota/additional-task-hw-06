@@ -64,5 +64,9 @@
     <symbol id="icon-menu-03" viewBox="0 0 32 32">
       <path stroke-linejoin="round" stroke-linecap="round" stroke-width="2.286" d="M4 16h24M4 8h24M4 24h24"/>
     </symbol>
+    <symbol id="icon-play" viewBox="0 0 32 32">
+      <path d="M11.886 23.771V10.057l12.8 6.857-12.8 6.857z"/>
+      <path stroke-width=".914" d="M31.543 16c0 8.584-6.959 15.543-15.543 15.543S.457 24.584.457 16 7.416.457 16 .457 31.543 7.416 31.543 16z"/>
+    </symbol>
   </defs>
 </svg>

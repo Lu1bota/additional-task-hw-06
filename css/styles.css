@@ -778,7 +778,43 @@ fieldset {
 
 /* #region Mobile Made */
 
+.made {
+    padding-top: 0;
+}
 
+.made-title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #111;
+    margin-bottom: 32px;
+}
+
+.made-title-orange {
+    color: #fd9222;
+}
+
+.container-made {
+    display: flex;
+    flex-direction: column;
+}
+
+/* .made-picture-container img {
+    position: relative;
+} */
+
+/* .made-picture-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    fill: transparent;
+    stroke: #fff;
+} */
 
 /* #region Mobile Made */
 
@@ -942,7 +978,13 @@ fieldset {
 
 /* #region Tablet Made */
 
-
+@media screen and (min-width: 736px) {
+    .made-title {
+        font-size: 24px;
+        line-height: 1.17;
+        margin-bottom: 50px;
+    }
+}
 
 /* #endregion Tablet Made */
 
@@ -1073,7 +1115,11 @@ fieldset {
 
 /* #region Desktop Ingredients */
 
-
+@media screen and (min-width: 1168px) {
+    .container-made {
+            flex-direction: row;
+        }
+}
 
 /* #endregion Desktop Ingredients */
 
