@@ -434,37 +434,35 @@
             How it’s <span class="made-title-orange">made?</span>
           </h2>
           <div class="container-made">
-            <picture class="made-picture-container">
-              <source
-                srcset="
-                  ./images/picture.jpg            1x,
-                  ./images/picture-desktop-2x.jpg 2x
-                "
-                media="(min-width = 1168px)"
-              />
-              <source
-                srcset="
-                  ./images/picture-tablet.jpg    1x,
-                  ./images/picture-tablet-2x.jpg 2x
-                "
-                media="(min-width = 736px)"
-              />
-              <source
-                srcset="
-                  ./images/picture-mobile.jpg    1x,
-                  ./images/picture-mobile-2x.jpg 2x
-                "
-                media="(max-width = 735px)"
-              />
-              <img
-                src="./images/picture-mobile.jpg"
-                alt="picture"
-                width="335"
-              />
-            </picture>
-            <!-- <svg class="made-picture-icon" width="35" height="35">
-              <use href="./images/icons.svg#icon-play"></use>
-            </svg> -->
+            <div class="made-picture-container">
+              <picture class="made-picture-container">
+                <source
+                  srcset="
+                    ./images/picture.jpg            1x,
+                    ./images/picture-desktop-2x.jpg 2x
+                  "
+                  media="(min-width: 1168px)"
+                />
+                <source
+                  srcset="
+                    ./images/picture-tablet.jpg    1x,
+                    ./images/picture-tablet-2x.jpg 2x
+                  "
+                  media="(min-width: 736px)"
+                />
+                <source
+                  srcset="
+                    ./images/picture-mobile.jpg    1x,
+                    ./images/picture-mobile-2x.jpg 2x
+                  "
+                  media="(max-width: 735px)"
+                />
+                <img src="./images/picture-mobile.jpg" alt="picture" />
+              </picture>
+              <svg class="made-picture-icon" width="35" height="35">
+                <use href="./images/icons.svg#icon-play"></use>
+              </svg>
+            </div>
 
             <div class="container-made-list">
               <h3 class="made-title-list">
@@ -658,7 +656,7 @@
         </div>
       </section> -->
       <!-- ===== REVIEWS ===== -->
-      <!-- <section class="section reviews">
+      <section class="section reviews">
         <div class="container container-reviews">
           <h2 class="reviews-title" id="chocolate-is-loved">
             Chocolate <span class="reviews-title-black">is loved</span>
@@ -698,7 +696,7 @@
             Leave a review
           </button>
         </div>
-      </section> -->
+      </section>
     </main>
 
     <!-- ===== FOOTER ===== -->

@@ -613,11 +613,10 @@ fieldset {
     display: flex;
 }
 
-.container-group-content {
+/* .container-group-content {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
-}
+} */
 
 .made-title {
     font-weight: 600;

@@ -1,11 +1,5 @@
 /* #region GLOBAL SETINGS */
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
 body {
     font-family: "Montserrat", sans-serif;
     background-color: #fafafa;
@@ -799,22 +793,70 @@ fieldset {
 
 .container-made {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
+    gap: 20px;
 }
 
-/* .made-picture-container img {
+.made-picture-container {
+    max-width: 335px;
     position: relative;
-} */
+}
 
-/* .made-picture-icon {
+.made-picture-icon {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 
-    fill: transparent;
-    stroke: #fff;
-} */
+    fill: #fff;
+}
+
+.container-made-list {
+    padding: 20px 14px;
+
+    max-width: 335px;
+    max-height: 456px;
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+.made-title-list {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.33;
+    color: #111;
+    margin-bottom: 20px;
+}
+
+.made-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.made-list-item {
+    display: flex;
+    align-items: baseline;
+    max-width: 291px;
+}
+
+.made-item-icon {
+    display: inline-block;
+    fill: #4C4C4C;
+    stroke: #ECEDED;
+    margin-right: 8px;
+    flex-shrink: 0;
+}
+
+.made-list-item-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.29;
+    letter-spacing: -0.02em;
+    color: #111;
+}
 
 /* #region Mobile Made */
 
@@ -984,6 +1026,29 @@ fieldset {
         line-height: 1.17;
         margin-bottom: 50px;
     }
+
+    .made-picture-container {
+        max-width: 614px;
+        position: static;
+    }
+
+    .made-picture-icon {
+        display: none;
+    }
+
+    .container-made-list {
+        padding: 32px;
+        max-width: 614px;
+        max-height: 356px;
+    }
+
+    .made-title-list {
+        margin-bottom: 28px;
+    }
+
+    .made-list-item {
+        max-width: 464px;
+    }
 }
 
 /* #endregion Tablet Made */
@@ -1117,8 +1182,25 @@ fieldset {
 
 @media screen and (min-width: 1168px) {
     .container-made {
-            flex-direction: row;
-        }
+        flex-direction: row;
+    }
+
+    .made-picture-container {
+        max-width: 600px;
+    }
+
+    .container-made-list {
+        max-width: 516px;
+        max-height: 400px;
+    }
+
+    .made-list {
+        gap: 24px;
+    }
+
+    .made-list-item {
+        max-width: 436px;
+    }
 }
 
 /* #endregion Desktop Ingredients */
