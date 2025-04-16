@@ -517,6 +517,7 @@ fieldset {
     max-width: 375px;
     height: 792px;
     display: flex;
+    justify-content: space-around;
 }
 
 .benefits-list {
